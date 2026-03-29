@@ -1,0 +1,95 @@
+<Master>:
+    Menu:
+        name:"menu"
+	Config:
+		name:"config"
+	First:
+		name:"first"
+
+
+<Menu>:
+    BoxLayout:
+        orientation:"vertical"
+        padding:100
+        spacing:50
+        Button:
+            text:"Iniciar"
+            font_size:40
+            on_release:
+                app.root.current="first"
+        Button:
+            text:"Sair"
+            font_size:40
+            on_release:app.stop()
+<Config>:
+	
+	temp_sub : temp_sub
+	temp_desc : temp_desc
+	
+	BoxLayout:
+		orientation:"vertical"
+		Label:
+			text:"Tempo das Rampas Softstarter"
+            font_size:40
+		Label:
+			id:temp_sub
+			text:"3"
+			font_size:40
+		BoxLayout:
+			orientation:"horizontal"
+			Button:
+				text:"+"
+				font_size:40
+				on_release:
+					root.soma()
+			Button:
+				text:"-"
+				font_size:40
+				on_release:
+					root.subtrai()
+		Label:
+			id:temp_desc
+			text:"3"
+			font_size:40
+		BoxLayout:
+			orientation:"horizontal"
+			Button:
+				text:"+"
+				font_size:40
+				on_release:
+					root.soma1()
+			Button:
+				text:"-"
+				font_size:40
+				on_release:
+					root.subtrai1()
+		Button:
+			text:"OK"
+            font_size:40
+			on_release:
+                app.root.current="first"
+
+<First>:
+	BoxLayout:
+		orientation:"vertical"
+		Label:
+			text:"Controle Softstarter"
+            font_size:40
+		BoxLayout:
+			orientation:"horizontal"
+			Button:
+				text:"Iniciar"
+				font_size:40
+			Button:
+				text:"Parar"
+				font_size:40
+		Button:
+			text:"Configurar"
+            font_size:40
+			on_release:
+				app.root.current="config"
+		Button:
+			text:"F#deu"
+            font_size:40
+	   		
+	
