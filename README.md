@@ -1,51 +1,63 @@
-🇧🇷 Português | 🇺🇸 [English](#english)
+# IHM Soft Starter — Interface Gráfica Python/Kivy
 
-# ihm-softstarter
-
-Interface HMI em Python/Kivy para controle do Soft Starter STM32 via porta serial.
-
-## Requisitos
-
-```bash
-pip install kivy pyserial
-python ihm_softstarter.py
-```
-
-## Configuração serial
-
-```python
-serial.Serial('COM3', 9600)  # Windows
-```
-
-## Hardware relacionado
-
-[stm32-softstarter](https://github.com/hiagoluansilva/stm32-softstarter)
-Centro Tecnológico Liberato — Novo Hamburgo/RS
+🇧🇷 **Português** | 🇺🇸 [English](#english)
 
 ---
 
-<a name="english"></a>
-🇧🇷 [Português](#) | 🇺🇸 English
+## Português
 
-# ihm-softstarter
+Interface Homem-Máquina (IHM) para o soft starter STM32, desenvolvida em Python com Kivy. Comunica via porta serial COM3 a 9600 bps.
 
-Python/Kivy HMI application for STM32 Soft Starter control via serial port.
+### O que faz
+- Exibe status do soft starter em tempo real
+- Permite configurar parâmetros de rampa (subida/descida)
+- Comunica com o STM32 via **serial COM3 a 9600 bps**
+- Interface gráfica responsiva construída com **Kivy (Python)**
 
-## Requirements
+### Configuração serial
+```python
+serial.Serial('COM3', 9600)
+```
 
-```bash
+### Requisitos
+```
 pip install kivy pyserial
+```
+
+### Executar
+```bash
 python ihm_softstarter.py
 ```
 
-## Serial configuration
+### Plataforma
+Python 3.x + Kivy + pyserial — Windows/Linux
 
+---
+
+## English
+
+Human-Machine Interface (HMI) for the STM32 soft starter, built in Python with Kivy. Communicates via serial port COM3 at 9600 bps.
+
+### What it does
+- Displays soft starter status in real time
+- Allows configuring ramp parameters (up/down)
+- Communicates with STM32 via **serial COM3 at 9600 bps**
+- Responsive GUI built with **Kivy (Python)**
+
+### Serial configuration
 ```python
-serial.Serial('COM3', 9600)  # Windows
-# or /dev/ttyUSB0 on Linux
+serial.Serial('COM3', 9600)
 ```
 
-## Related hardware
+### Requirements
+```
+pip install kivy pyserial
+```
 
-[stm32-softstarter](https://github.com/hiagoluansilva/stm32-softstarter)
-Centro Tecnológico Liberato — Novo Hamburgo/RS, Brazil
+### Run
+```bash
+python ihm_softstarter.py
+```
+
+### Platform
+Python 3.x + Kivy + pyserial — Windows/Linux
